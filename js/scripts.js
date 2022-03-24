@@ -1,13 +1,12 @@
-jQuery(document).ready(function() {
-  jQuery("h1").click(function() {
-    alert("This is a heading.");
-  });
+$(document).ready(function() {
+  const height = parseInt(prompt("in feet,how tall are you?."));
 
-  jQuery("p").click(function() {
-    alert("This is a paragraph.");
-  });
-
-  jQuery("img").click(function() {
-    alert("This is an image.");
-  });
+    if (height > 4 && height <= 6) {
+      $('#overHeight').show();
+    } else if (height > 6){
+      $("#tooTall").show();
+    }
+      else {
+        $('#underHeight').show();
+    }
 });
